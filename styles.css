@@ -7,7 +7,7 @@
 }
 :root {
     --primary-color: #3bf573;
-    --text-color: #727171;
+    --text-color: #555955;
 }
 html {
     font-size: 10px;
@@ -31,6 +31,11 @@ a {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--text-color);
+    text-align: justify; /* Center the text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+.description:hover {
+    color: #29a93c; /* Greenish tint on hover */
 }
 .title {
     color: var(--primary-color);
@@ -40,7 +45,7 @@ a {
 }
 .item_preTitle {
     font-size: 1.4rem;
-    color: var(--text-color);
+    color: rgb(174, 169, 178);
     font-weight: 300;
 }
 .item_title {
@@ -199,6 +204,9 @@ a {
     gap: 0.5rem;
     color: var(--text-color);
 }
+.interest_item:hover {
+    color: #913bc7; /* tint on hover */
+}
 .interest_item svg {
     width: 2rem;
 }
@@ -225,7 +233,7 @@ a {
 
 hr {
     grid-column: 1/-1;
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
     margin-top: 5rem;
     margin-bottom: 1rem;
