@@ -24,7 +24,7 @@ img {
 }
 a {
     text-decoration: none;
-    color: rgb(156, 127, 229);
+    color: rgb(216, 208, 236);
 }
 .description {
     margin-top: 1rem;
@@ -35,7 +35,7 @@ a {
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 .description:hover {
-    color: #795edb; /* Greenish tint on hover */
+    color: #eeebf6; /* Greenish tint on hover */
 }
 .title {
     color: var(--primary-color);
@@ -57,7 +57,7 @@ a {
 .item_subtitle {
     font-size: 1.4rem;
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* layouts */
@@ -139,7 +139,7 @@ a {
     text-transform: uppercase;
 }
 .downloadBtn {
-    display: block;
+    display: inline;
     text-decoration: underline;
     font-size: 1.6rem;
     margin-top: 1rem;
