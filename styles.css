@@ -7,7 +7,7 @@
 }
 :root {
     --primary-color: #3bf573;
-    --text-color: #555955;
+    --text-color: #abb3b0;
 }
 html {
     font-size: 10px;
@@ -24,7 +24,7 @@ img {
 }
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(156, 127, 229);
 }
 .description {
     margin-top: 1rem;
@@ -35,7 +35,7 @@ a {
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 .description:hover {
-    color: #29a93c; /* Greenish tint on hover */
+    color: #795edb; /* Greenish tint on hover */
 }
 .title {
     color: var(--primary-color);
@@ -45,7 +45,7 @@ a {
 }
 .item_preTitle {
     font-size: 1.4rem;
-    color: rgb(174, 169, 178);
+    color: rgb(214, 230, 216);
     font-weight: 300;
 }
 .item_title {
