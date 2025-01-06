@@ -55,7 +55,7 @@ a {
     margin: 0.8rem 0;
 }
 .item_subtitle {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 500;
 }
@@ -178,6 +178,11 @@ a {
 .certification_item {
     margin-top: 2rem;
 }
+
+.certification_link {
+    text-decoration: underline;
+}
+
 /* exp */
 .exp_item {
     margin-top: 2rem;
