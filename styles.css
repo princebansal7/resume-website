@@ -245,8 +245,35 @@ hr {
     border: none;
     border-top: 2px solid rgba(128, 128, 128, 0.229);
 }
+/* Projects section */
+.project_item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project_video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    object-fit: cover;
+}
+
+.project_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 @media only screen and (max-width: 768px) {
     hr {
         margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .project_video {
+        aspect-ratio: 16 / 9;
     }
 }
