@@ -7,7 +7,7 @@
 }
 :root {
     --primary-color: #3bf573;
-    --text-color: #abb3b0;
+    --text-color: #9ea9a5;
 }
 html {
     font-size: 10px;
@@ -143,6 +143,7 @@ a {
     text-decoration: underline;
     font-size: 1.6rem;
     margin-top: 1rem;
+    color: whitesmoke;
 }
 .downloadBtn:hover {
     color: var(--primary-color);
