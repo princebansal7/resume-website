@@ -587,6 +587,43 @@ a:hover {
     filter: drop-shadow(0 0 8px rgba(24, 224, 81, 0.5));
 }
 
+/* Social media specific colors */
+.social_item.github:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social_item.github:hover svg {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+}
+
+.social_item.youtube:hover {
+    color: #ff0000;
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.social_item.youtube:hover svg {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.7));
+}
+
+.social_item.linkedin:hover {
+    color: #0077b5;
+    border-color: rgba(0, 119, 181, 0.3);
+}
+
+.social_item.linkedin:hover svg {
+    filter: drop-shadow(0 0 8px rgba(0, 119, 181, 0.7));
+}
+
+.social_item.twitter:hover {
+    color: #1da1f2;
+    border-color: rgba(29, 161, 242, 0.3);
+}
+
+.social_item.twitter:hover svg {
+    filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.7));
+}
+
 hr {
     grid-column: 1/-1;
     width: 98%;
