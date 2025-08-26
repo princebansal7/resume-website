@@ -4,10 +4,73 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prince Bansal</title>
+        <title>Prince Bansal | Software Engineer Portfolio</title>
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Prince Bansal - Software Engineer and DevOps Specialist. Portfolio, projects, skills, certifications, and contact information. Experienced in AWS, GCP, Azure, Kubernetes, Terraform, CI/CD, and full-stack development."
+        />
+        <meta
+            name="keywords"
+            content="Prince Bansal, DevOps, Software Engineer, Portfolio, AWS, GCP, Azure, Kubernetes, Terraform, CI/CD, ReactJS, NodeJS, Resume, Cloud, SRE, Full Stack"
+        />
+        <meta name="author" content="Prince Bansal" />
+        <meta name="theme-color" content="#22223b" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://princebansal.in/" />
+        <!-- Social Meta -->
+        <meta
+            property="og:title"
+            content="Prince Bansal | DevOps & Software Engineer Portfolio"
+        />
+        <meta
+            property="og:description"
+            content="Portfolio of Prince Bansal, DevOps and Software Engineer. Explore projects, skills, certifications, and contact details."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://princebansal.in/" />
+        <meta
+            property="og:image"
+            content="https://princebansal.in/images/DP.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Prince Bansal | DevOps & Software Engineer Portfolio"
+        />
+        <meta
+            name="twitter:description"
+            content="Portfolio of Prince Bansal, DevOps and Software Engineer. Explore projects, skills, certifications, and contact details."
+        />
+        <meta
+            name="twitter:image"
+            content="https://princebansal.in/images/DP.jpg"
+        />
+        <!-- Favicon and Preload -->
+        <link rel="icon" type="image/png" href="./images/DP.png" />
+        <link
+            rel="preload"
+            as="image"
+            href="./images/DP.jpg"
+            imagesrcset="./images/DP.jpg 1x, ./images/DP.jpg 2x"
+        />
+        <!-- Preconnect for Google Fonts -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+            crossorigin
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Stylesheet: Use rel="preload" for critical CSS -->
+        <link
+            rel="preload"
+            href="styles.min.css"
+            as="style"
+            onload="this.rel='stylesheet'"
+        />
+        <noscript><link rel="stylesheet" href="styles.min.css" /></noscript>
+        <!-- Feather Icons: defer loading -->
         <script src="https://unpkg.com/feather-icons"></script>
-        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-        <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body>
@@ -44,6 +107,7 @@
                             class="downloadBtn"
                             href="https://bit.ly/princebansal2"
                             target="_blank"
+                            rel="noopener"
                             >Resume</a
                         >
                     </div>
@@ -123,6 +187,7 @@
                                 class="description certification_link"
                                 href="https://currency.princebansal.in"
                                 target="_blank"
+                                rel="noopener"
                                 >Try it Live</a
                             >
                         </div>
@@ -139,6 +204,7 @@
                                 class="description certification_link"
                                 href="https://passgen.princebansal.in"
                                 target="_blank"
+                                rel="noopener"
                                 >Try it Live</a
                             >
                         </div>
@@ -158,6 +224,7 @@
                                 class="description certification_link"
                                 href="https://sorting.princebansal.in"
                                 target="_blank"
+                                rel="noopener"
                                 >Try it Live</a
                             >
                         </div>
@@ -177,6 +244,7 @@
                                 class="description certification_link"
                                 href="https://guessnum.princebansal.in"
                                 target="_blank"
+                                rel="noopener"
                                 >Try it Live</a
                             >
                         </div>
@@ -216,6 +284,7 @@
                             class="description certification_link"
                             href="https://google.accredible.com/347c10ad-acf6-4d48-bd6a-2d23a26df96b"
                             target="_blank"
+                            rel="noopener"
                             class="certification_link"
                         >
                             Certified in GCP cloud platform
@@ -230,6 +299,7 @@
                             class="description certification_link"
                             href="https://www.credly.com/badges/a60ba284-5043-4765-a891-bd6494b0c84e/public_url"
                             target="_blank"
+                            rel="noopener"
                             >Terraform Associate</a
                         >
                     </div>
@@ -314,6 +384,7 @@
                         <a
                             href="https://github.com/princebansal7"
                             target="_blank"
+                            rel="noopener"
                             class="social_item github"
                         >
                             <i data-feather="github"></i>
@@ -322,6 +393,7 @@
                         <a
                             href="https://www.linkedin.com/in/princebansal07/"
                             target="_blank"
+                            rel="noopener"
                             class="social_item linkedin"
                         >
                             <i data-feather="linkedin"></i>
@@ -330,6 +402,7 @@
                         <a
                             href="https://youtube.com/playlist?list=PLvPu3SWhzo_RuZvUp5k2cus0pQGZtJX7A&si=XLClpHZzoh-Z0qDr"
                             target="_blank"
+                            rel="noopener"
                             class="social_item youtube"
                         >
                             <i data-feather="youtube"></i>
@@ -338,6 +411,7 @@
                         <a
                             href="https://twitter.com/princebansal_"
                             target="_blank"
+                            rel="noopener"
                             class="social_item twitter"
                         >
                             <i data-feather="twitter"></i>
@@ -348,7 +422,9 @@
             </div>
         </div>
         <script>
-            feather.replace();
+            window.addEventListener("load", () => {
+                if (window.feather) feather.replace();
+            });
         </script>
     </body>
 </html>
