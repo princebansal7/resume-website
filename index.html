@@ -21,11 +21,11 @@
         <!-- Social Meta -->
         <meta
             property="og:title"
-            content="Prince Bansal | DevOps & Software Engineer Portfolio"
+            content="Prince Bansal | Software Engineer Portfolio"
         />
         <meta
             property="og:description"
-            content="Portfolio of Prince Bansal, DevOps and Software Engineer. Explore projects, skills, certifications, and contact details."
+            content="Portfolio of Prince Bansal, Software Engineer. Explore projects, skills, certifications, and contact details."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princebansal.in/" />
@@ -40,18 +40,19 @@
         />
         <meta
             name="twitter:description"
-            content="Portfolio of Prince Bansal, DevOps and Software Engineer. Explore projects, skills, certifications, and contact details."
+            content="Portfolio of Prince Bansal,Software Engineer. Explore projects, skills, certifications, and contact details."
         />
         <meta
             name="twitter:image"
             content="https://princebansal.in/images/DP.webp"
         />
         <!-- Favicon and Preload -->
-        <link rel="icon" type="image/png" href="./favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
         <link
             rel="preload"
             as="image"
             href="./images/DP.webp"
+            type="image/webp"
             imagesrcset="./images/DP.webp 1x, ./images/DP.webp 2x"
         />
         <!-- Preconnect for Google Fonts -->
@@ -78,7 +79,12 @@
             <div class="profile">
                 <div class="profile_container">
                     <div class="profile_profileImg">
-                        <img src="./images/DP.webp" alt="Prince_Bansal_DP" />
+                        <img
+                            src="./images/DP.webp"
+                            alt="Prince_Bansal_DP"
+                            loading="eager"
+                            fetchpriority="high"
+                        />
                     </div>
                     <div>
                         <h1 class="profile_name">
@@ -422,9 +428,7 @@
             </div>
         </div>
         <script>
-            window.addEventListener("load", () => {
-                if (window.feather) feather.replace();
-            });
+            feather.replace();
         </script>
     </body>
 </html>
