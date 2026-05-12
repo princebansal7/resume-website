@@ -18,6 +18,8 @@
         <meta name="theme-color" content="#22223b" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://princebansal.in/" />
+        <!-- hreflang for SEO -->
+        <link rel="alternate" hreflang="en" href="https://princebansal.in/" />
         <!-- Social Meta -->
         <meta
             property="og:title"
@@ -46,14 +48,14 @@
             name="twitter:image"
             content="https://princebansal.in/images/DP.webp"
         />
-        <!-- Favicon and Preload -->
+        <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        <!-- Preload critical image with width/height to prevent layout shift -->
         <link
             rel="preload"
             as="image"
             href="./images/DP.webp"
-            type="image/webp"
-            imagesrcset="./images/DP.webp 1x, ./images/DP.webp 2x"
+            imagesrcset="./images/DP.webp 280w"
         />
         <!-- Preconnect for Google Fonts -->
         <link
@@ -62,26 +64,30 @@
             crossorigin
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <!-- Stylesheet: Use rel="preload" for critical CSS -->
+        <!-- Load fonts with display=swap to prevent FOIT -->
         <link
-            rel="preload"
-            href="styles.min.css"
-            as="style"
-            onload="this.rel = 'stylesheet'"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
         />
+        <!-- Inline critical CSS for faster first paint -->
+        <style>
+            :root{--primary-color:#18e051;--primary-hover:#09a277;--secondary-color:#def10f;--accent-color:#18ca0f;--text-color:#9ca3af;--text-light:#d1d5db;--text-muted:#9fa6b5;--bg-dark:#0a0a0a;--bg-card:#111111;--bg-card-hover:#1a1a1a;--border-color:#2a2a2a;--shadow:0 8px 32px rgba(0,0,0,0.3);--shadow-hover:0 12px 40px rgba(24,224,81,0.15)}*{padding:0;margin:0;box-sizing:border-box}html{font-size:10px;scroll-behavior:smooth}body{font-family:Poppins,Inter,sans-serif;background:linear-gradient(135deg,var(--bg-dark) 0%,#1a1a1a 50%,#0f1a0f 100%);color:#fff;line-height:1.6}.container{max-width:1200px;width:90%;margin:0 auto;display:grid;padding:4rem;background:var(--bg-card);grid-template-columns:1fr 1fr;gap:4rem;border-radius:20px;box-shadow:var(--shadow);margin-top:2rem;margin-bottom:2rem;border:1px solid var(--border-color)}@media(max-width:768px){.container{width:95%;grid-template-columns:1fr;padding:2rem;gap:3rem;margin-top:1rem;margin-bottom:1rem}}.profile{grid-column:1/-1;margin-bottom:3rem;padding:2rem;background:linear-gradient(135deg,rgba(24,224,81,0.05) 0%,rgba(9,162,119,0.03) 50%,rgba(222,241,15,0.02) 100%);border-radius:16px;border:1px solid rgba(24,224,81,0.1)}.profile_container{display:flex;gap:3rem;align-items:center}@media(max-width:768px){.profile_container{flex-direction:column;text-align:center;gap:2rem}}.profile_profileImg{max-width:280px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}@media(max-width:768px){.profile_profileImg{max-width:200px}}.profile_profileImg img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}.profile_name_firstName{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 50%,#d1d5db 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:300;font-size:clamp(2.5rem,8vw,4rem);text-transform:uppercase;display:block;margin-bottom:-0.8rem}.profile_name_lastName{background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;font-size:clamp(2rem,15vw,6rem);text-transform:uppercase;display:block}.profile_title{background:linear-gradient(135deg,var(--accent-color) 0%,var(--secondary-color) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1.6rem;font-weight:500;text-transform:uppercase;margin:1rem 0;letter-spacing:1px}.description{font-size:1.5rem;font-weight:400;color:var(--text-color);line-height:1.7}.title{background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;font-size:2.2rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2rem;position:relative;padding-bottom:0.5rem}.title::after{content:"";position:absolute;bottom:0;left:0;width:50px;height:3px;background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);border-radius:2px}.item_title{font-size:1.8rem;color:#fff;font-weight:600;margin:0.8rem 0}.item_preTitle{font-size:1.4rem;color:var(--accent-color);font-weight:500}.item_subtitle{font-size:1.5rem;color:var(--text-muted);font-weight:500;margin-bottom:1rem}.downloadBtn{display:inline-block;text-decoration:none;font-size:1.6rem;margin-top:1.5rem;color:#fff;padding:0.8rem 1.5rem;background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);border-radius:8px;font-weight:500;position:relative;overflow:hidden;border:none}.downloadBtn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(24,224,81,0.4);color:#fff}.group-1,.group-2{display:flex;flex-direction:column;gap:4rem}.group-3{max-width:800px;width:100%;margin:0 auto;grid-column:1/-1;display:flex;flex-direction:row;gap:4rem}@media(max-width:768px){.group-3{flex-direction:column;gap:2rem}}.group-3>div{flex:1;padding:2rem;background:var(--bg-card);border-radius:12px;border:1px solid var(--border-color)};
+        </style>
+        <!-- Defer non-critical CSS -->
+        <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="styles.min.css" /></noscript>
-        <!-- Feather Icons: defer loading -->
-        <script src="https://unpkg.com/feather-icons"></script>
     </head>
 
     <body>
-        <div class="container">
+        <main class="container">
             <div class="profile">
                 <div class="profile_container">
                     <div class="profile_profileImg">
                         <img
                             src="./images/DP.webp"
-                            alt="Prince_Bansal_DP"
+                            alt="Prince Bansal - Software Engineer"
+                            width="280"
+                            height="280"
                             loading="eager"
                             fetchpriority="high"
                         />
@@ -302,7 +308,6 @@
                             href="https://google.accredible.com/347c10ad-acf6-4d48-bd6a-2d23a26df96b"
                             target="_blank"
                             rel="noopener"
-                            class="certification_link"
                         >
                             Certified in GCP cloud platform
                         </a>
@@ -369,15 +374,15 @@
                     <h3 class="title">Interest</h3>
                     <div class="interest_items">
                         <div class="interest_item">
-                            <i data-feather="music"></i>
+                            <i data-feather="music" aria-hidden="true"></i>
                             <span>Music</span>
                         </div>
                         <div class="interest_item">
-                            <i data-feather="book"></i>
+                            <i data-feather="book" aria-hidden="true"></i>
                             <span>Manga</span>
                         </div>
                         <div class="interest_item">
-                            <i data-feather="map"></i>
+                            <i data-feather="map" aria-hidden="true"></i>
                             <span>Travel</span>
                         </div>
                     </div>
@@ -403,8 +408,9 @@
                             target="_blank"
                             rel="noopener"
                             class="social_item github"
+                            aria-label="GitHub profile"
                         >
-                            <i data-feather="github"></i>
+                            <i data-feather="github" aria-hidden="true"></i>
                             <span>/princebansal7</span>
                         </a>
                         <a
@@ -412,8 +418,9 @@
                             target="_blank"
                             rel="noopener"
                             class="social_item linkedin"
+                            aria-label="LinkedIn profile"
                         >
-                            <i data-feather="linkedin"></i>
+                            <i data-feather="linkedin" aria-hidden="true"></i>
                             <span>/princebansal07</span>
                         </a>
                         <a
@@ -421,8 +428,9 @@
                             target="_blank"
                             rel="noopener"
                             class="social_item youtube"
+                            aria-label="YouTube channel"
                         >
-                            <i data-feather="youtube"></i>
+                            <i data-feather="youtube" aria-hidden="true"></i>
                             <span>/@princebansal_</span>
                         </a>
                         <a
@@ -430,16 +438,21 @@
                             target="_blank"
                             rel="noopener"
                             class="social_item twitter"
+                            aria-label="X (Twitter) profile"
                         >
-                            <i data-feather="twitter"></i>
+                            <i data-feather="twitter" aria-hidden="true"></i>
                             <span>/princebansal_</span>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+        <!-- Defer Feather Icons for non-blocking load -->
+        <script src="https://unpkg.com/feather-icons" defer></script>
         <script>
-            feather.replace();
+            document.addEventListener('DOMContentLoaded', function() {
+                if (window.feather) feather.replace();
+            });
         </script>
     </body>
 </html>
