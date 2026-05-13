@@ -4,30 +4,32 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prince Bansal | Software Engineer Portfolio</title>
-        <!-- SEO Meta Tags -->
+        <title>Prince Bansal | Platform & DevOps Engineer</title>
+
+        <!-- SEO -->
         <meta
             name="description"
-            content="Prince Bansal - Software Engineer and DevOps Specialist. Portfolio, projects, skills, certifications, and contact information. Experienced in AWS, GCP, Azure, Kubernetes, Terraform, CI/CD, and full-stack development."
+            content="Prince Bansal — Platform, DevOps & Cloud Engineer. I operate multi-cloud Kubernetes platforms at scale across AWS, GCP and Azure. Specialized in Terraform, CI/CD, automation, cost optimization and reliability engineering."
         />
         <meta
             name="keywords"
-            content="Prince Bansal, DevOps, Software Engineer, Portfolio, AWS, GCP, Azure, Kubernetes, Terraform, CI/CD, ReactJS, NodeJS, Resume, Cloud, SRE, Full Stack"
+            content="Prince Bansal, Platform Engineer, DevOps Engineer, Cloud Engineer, SRE, Kubernetes, Terraform, AWS, GCP, Azure, CI/CD, GitOps, Karpenter, Ansible, Prometheus, Infrastructure Automation, Portfolio"
         />
         <meta name="author" content="Prince Bansal" />
-        <meta name="theme-color" content="#22223b" />
+        <meta name="theme-color" content="#0a0a0b" />
+        <meta name="color-scheme" content="dark" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://princebansal.in/" />
-        <!-- hreflang for SEO -->
         <link rel="alternate" hreflang="en" href="https://princebansal.in/" />
-        <!-- Social Meta -->
+
+        <!-- Open Graph / Twitter -->
         <meta
             property="og:title"
-            content="Prince Bansal | Software Engineer Portfolio"
+            content="Prince Bansal | Platform & DevOps Engineer"
         />
         <meta
             property="og:description"
-            content="Portfolio of Prince Bansal, Software Engineer. Explore projects, skills, certifications, and contact details."
+            content="Platform, DevOps & Cloud Engineer specializing in Kubernetes, Terraform, multi-cloud infrastructure, CI/CD and reliability engineering."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princebansal.in/" />
@@ -38,421 +40,1633 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Prince Bansal | DevOps & Software Engineer Portfolio"
+            content="Prince Bansal | Platform & DevOps Engineer"
         />
         <meta
             name="twitter:description"
-            content="Portfolio of Prince Bansal,Software Engineer. Explore projects, skills, certifications, and contact details."
+            content="Platform, DevOps & Cloud Engineer — Kubernetes, Terraform, multi-cloud infra, CI/CD, reliability."
         />
         <meta
             name="twitter:image"
             content="https://princebansal.in/images/DP.webp"
         />
+
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-        <!-- Preload critical image with width/height to prevent layout shift -->
+
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Prince Bansal",
+                "jobTitle": "Platform & DevOps Engineer",
+                "url": "https://princebansal.in/",
+                "image": "https://princebansal.in/images/DP.webp",
+                "email": "mailto:prince.bansal1914@gmail.com",
+                "sameAs": [
+                    "https://github.com/princebansal7",
+                    "https://www.linkedin.com/in/princebansal07/",
+                    "https://x.com/princebansal_"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Chandigarh",
+                    "addressCountry": "India"
+                },
+                "knowsAbout": [
+                    "Kubernetes",
+                    "Docker",
+                    "Terraform",
+                    "AWS",
+                    "GCP",
+                    "Azure",
+                    "CI/CD",
+                    "GitOps",
+                    "Linux",
+                    "Infrastructure Automation",
+                    "Cloud Native Technologies"
+                ]
+            }
+        </script>
+
+        <!-- Preload critical assets -->
         <link
             rel="preload"
             as="image"
             href="./images/DP.webp"
-            imagesrcset="./images/DP.webp 280w"
+            imagesrcset="./images/DP.webp 380w"
         />
-        <!-- Preconnect for Google Fonts -->
-        <link
-            rel="preconnect"
-            href="https://fonts.googleapis.com"
-            crossorigin
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <!-- Load fonts with display=swap to prevent FOIT -->
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="dns-prefetch" href="https://github-readme-stats.vercel.app" />
+
+        <!-- Fonts -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
             rel="stylesheet"
         />
-        <!-- Inline critical CSS for faster first paint -->
+
+        <!-- Critical inline CSS for fastest first paint of nav + hero shell -->
         <style>
-            :root{--primary-color:#18e051;--primary-hover:#09a277;--secondary-color:#def10f;--accent-color:#18ca0f;--text-color:#9ca3af;--text-light:#d1d5db;--text-muted:#9fa6b5;--bg-dark:#0a0a0a;--bg-card:#111111;--bg-card-hover:#1a1a1a;--border-color:#2a2a2a;--shadow:0 8px 32px rgba(0,0,0,0.3);--shadow-hover:0 12px 40px rgba(24,224,81,0.15)}*{padding:0;margin:0;box-sizing:border-box}html{font-size:10px;scroll-behavior:smooth}body{font-family:Poppins,Inter,sans-serif;background:linear-gradient(135deg,var(--bg-dark) 0%,#1a1a1a 50%,#0f1a0f 100%);color:#fff;line-height:1.6}.container{max-width:1200px;width:90%;margin:0 auto;display:grid;padding:4rem;background:var(--bg-card);grid-template-columns:1fr 1fr;gap:4rem;border-radius:20px;box-shadow:var(--shadow);margin-top:2rem;margin-bottom:2rem;border:1px solid var(--border-color)}@media(max-width:768px){.container{width:95%;grid-template-columns:1fr;padding:2rem;gap:3rem;margin-top:1rem;margin-bottom:1rem}}.profile{grid-column:1/-1;margin-bottom:3rem;padding:2rem;background:linear-gradient(135deg,rgba(24,224,81,0.05) 0%,rgba(9,162,119,0.03) 50%,rgba(222,241,15,0.02) 100%);border-radius:16px;border:1px solid rgba(24,224,81,0.1)}.profile_container{display:flex;gap:3rem;align-items:center}@media(max-width:768px){.profile_container{flex-direction:column;text-align:center;gap:2rem}}.profile_profileImg{max-width:280px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}@media(max-width:768px){.profile_profileImg{max-width:200px}}.profile_profileImg img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}.profile_name_firstName{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 50%,#d1d5db 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:300;font-size:clamp(2.5rem,8vw,4rem);text-transform:uppercase;display:block;margin-bottom:-0.8rem}.profile_name_lastName{background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;font-size:clamp(2rem,15vw,6rem);text-transform:uppercase;display:block}.profile_title{background:linear-gradient(135deg,var(--accent-color) 0%,var(--secondary-color) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1.6rem;font-weight:500;text-transform:uppercase;margin:1rem 0;letter-spacing:1px}.description{font-size:1.5rem;font-weight:400;color:var(--text-color);line-height:1.7}.title{background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;font-size:2.2rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2rem;position:relative;padding-bottom:0.5rem}.title::after{content:"";position:absolute;bottom:0;left:0;width:50px;height:3px;background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);border-radius:2px}.item_title{font-size:1.8rem;color:#fff;font-weight:600;margin:0.8rem 0}.item_preTitle{font-size:1.4rem;color:var(--accent-color);font-weight:500}.item_subtitle{font-size:1.5rem;color:var(--text-muted);font-weight:500;margin-bottom:1rem}.downloadBtn{display:inline-block;text-decoration:none;font-size:1.6rem;margin-top:1.5rem;color:#fff;padding:0.8rem 1.5rem;background:linear-gradient(135deg,#18e051 0%,#09a277 50%,#def10f 100%);border-radius:8px;font-weight:500;position:relative;overflow:hidden;border:none}.downloadBtn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(24,224,81,0.4);color:#fff}.group-1,.group-2{display:flex;flex-direction:column;gap:4rem}.group-3{max-width:800px;width:100%;margin:0 auto;grid-column:1/-1;display:flex;flex-direction:row;gap:4rem}@media(max-width:768px){.group-3{flex-direction:column;gap:2rem}}.group-3>div{flex:1;padding:2rem;background:var(--bg-card);border-radius:12px;border:1px solid var(--border-color)};
+            :root {
+                --bg-base: #0a0a0b;
+                --text-secondary: #e4e4e7;
+                --nav-height: 64px;
+                --font-sans: "Inter", -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", sans-serif;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: calc(var(--nav-height) + 1rem);
+            }
+            body {
+                font-family: var(--font-sans);
+                background: var(--bg-base);
+                color: var(--text-secondary);
+                min-height: 100vh;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+            .bg-grid,
+            .bg-glow {
+                position: fixed;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
+            .bg-grid {
+                background-image: linear-gradient(
+                        rgba(255, 255, 255, 0.025) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(255, 255, 255, 0.025) 1px,
+                        transparent 1px
+                    );
+                background-size: 56px 56px;
+                mask-image: radial-gradient(
+                    ellipse 90% 60% at 50% 15%,
+                    #000 30%,
+                    transparent 80%
+                );
+                -webkit-mask-image: radial-gradient(
+                    ellipse 90% 60% at 50% 15%,
+                    #000 30%,
+                    transparent 80%
+                );
+            }
+            .bg-glow {
+                background:
+                    radial-gradient(
+                        circle 620px at 82% -10%,
+                        rgba(34, 211, 238, 0.12),
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        circle 720px at -5% 8%,
+                        rgba(59, 130, 246, 0.10),
+                        transparent 60%
+                    );
+            }
+            .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: var(--nav-height);
+                z-index: 50;
+                display: flex;
+                align-items: center;
+            }
+            main {
+                position: relative;
+                z-index: 1;
+            }
         </style>
-        <!-- Defer non-critical CSS -->
-        <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'" />
-        <noscript><link rel="stylesheet" href="styles.min.css" /></noscript>
+
+        <!-- Modular stylesheets (parallel load via HTTP/2) -->
+        <link rel="stylesheet" href="./css/tokens.css" />
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/components.css" />
+        <link rel="stylesheet" href="./css/sections.css" />
     </head>
 
     <body>
-        <main class="container">
-            <div class="profile">
-                <div class="profile_container">
-                    <div class="profile_profileImg">
-                        <img
-                            src="./images/DP.webp"
-                            alt="Prince Bansal - Software Engineer"
-                            width="280"
-                            height="280"
-                            loading="eager"
-                            fetchpriority="high"
-                        />
-                    </div>
-                    <div>
-                        <h1 class="profile_name">
-                            <span class="profile_name_firstName">Prince</span>
-                            <span class="profile_name_lastName">Bansal</span>
-                        </h1>
-                        <p class="profile_title">
-                            Software Engineer with DevOps Expertise
-                        </p>
-                        <p class="description profile_description">
-                            Software Engineer with experience operating
-                            multi-cloud infrastructure (AWS, GCP, Azure) and
-                            large-scale Kubernetes platforms in production.
-                            Specialized in automation, CI/CD, cost optimization,
-                            and reliability engineering, with hands-on expertise
-                            in Terraform, Ansible, Kubernetes (Karpenter), and
-                            observability using Prometheus. Proven experience in
-                            incident response, compliance-driven operations (SOC
-                            2, PCI), and scripting with Python and Shell, with
-                            working exposure to ReactJS and NodeJS for platform
-                            tooling.
-                        </p>
-                        <a
-                            class="downloadBtn"
-                            href="https://bit.ly/princebansal_ops2"
-                            target="_blank"
-                            rel="noopener"
-                            >Resume</a
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <!-- Background layers -->
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="bg-glow" aria-hidden="true"></div>
+        <div class="bg-noise" aria-hidden="true"></div>
+
+        <!-- ============================================================
+             NAVIGATION
+             ============================================================ -->
+        <header class="nav" role="banner">
+            <div class="nav__inner">
+                <a href="#" class="nav__logo" aria-label="Prince Bansal — home">
+                    <span class="nav__logo-mark" aria-hidden="true">PB</span>
+                    <span class="nav__logo-text">Prince Bansal</span>
+                </a>
+
+                <nav class="nav__links" aria-label="Primary">
+                    <a href="#about">About</a>
+                    <a href="#stack">Stack</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="nav__actions">
+                    <a
+                        href="https://bit.ly/princebansal_ops2"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn--ghost btn--sm nav__cta-desktop"
+                    >
+                        Resume
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
                         >
-                    </div>
+                            <path d="M7 17 17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </a>
+                    <button
+                        class="nav__menu-btn"
+                        aria-label="Toggle navigation menu"
+                        aria-controls="mobile-drawer"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="group-1">
-                <div class="exp">
-                    <h3 class="title">Experience</h3>
-                    <div class="exp_item">
-                        <h4 class="item_title">Yellow.ai</h4>
-                        <p class="item_subtitle">
-                            Software Development Engineer
-                        </p>
-                        <p class="item_preTitle">July 2025 - Present</p>
-                        <p class="description">
-                            Managed multi-cloud infrastructure (AWS, GCP, Azure)
-                            across 8 global regions, supporting large-scale
-                            migrations, upgrades, and high-availability
-                            deployments.
-                        </p>
-                        <p class="description">
-                            Drove continuous cloud cost optimization
-                            initiatives, achieving <b>$2K–$5K</b> monthly
-                            savings through VM right-sizing, Kubernetes node
-                            optimization using Karpenter, and disk/storage
-                            tuning across production environments. Led AMD → ARM
-                            (Graviton) migrations for Kubernetes workloads and
-                            VM fleets using hardened OS images, improving
-                            price-performance efficiency and reducing
-                            infrastructure costs.
-                        </p>
-                        <p class="description">
-                            Actively participated in SOC 2 and PCI compliance
-                            audits, conducting access reviews, DR drills, and
-                            backup validation across production environments.
-                            Automated SOC 2 evidence collection using Selenium,
-                            saving hours of manual effort each month and
-                            improving audit readiness. Strengthened platform
-                            security through least-privilege IAM practices and
-                            Kubernetes access controls.
-                        </p>
-                        <p class="description">
-                            Built and maintained Ansible-based automation for
-                            infrastructure operations, including node removal
-                            based on health/state, security group updates, and
-                            disk alert detection and remediation. Developed
-                            incident-response automation workflows to reduce
-                            manual toil and improve MTTR
-                        </p>
-                    </div>
-                    <div class="exp_item">
-                        <h4 class="item_title">Quantiphi Analytics</h4>
-                        <p class="item_subtitle">Platform Engineer</p>
-                        <p class="item_preTitle">Jan 2023 - June 2025</p>
-                        <p class="description">
-                            Led AWS-to-GCP migration of 15 microservices,
-                            achieving 90% cost reduction. Built modular
-                            Terraform scripts, optimized Cloud Build/Deploy
-                            pipelines for 40% CI/CD efficiency gain, and
-                            improved scalability via Apigee Gateway and Cloud
-                            Run integration.
-                        </p>
-                        <p class="description">
-                            Managed 300+ deployments across multi-environment
-                            pipelines (Concourse, GitHub Actions), improving
-                            code stability by 20%, reducing rollbacks by 15%,
-                            and cutting manual promotion effort by 70%,
-                            accelerating releases by 60%. Enhanced CI/CD
-                            pipelines with automated validations,
-                            infrastructure-aware deployments, and rollback-safe
-                            release mechanisms.
-                        </p>
-                        <p class="description">
-                            Automated provisioning and configuration of critical
-                            GCP services (Pub/Sub, Cloud Scheduler, Logging,
-                            Monitoring) with Terraform, increasing reliability
-                            by 40% and reducing manual errors by 50%.
-                        </p>
-                    </div>
-                </div>
-                <div class="projects">
-                    <h3 class="title">Experiments</h3>
-                    <div class="project_item">
-                        <div class="project_info">
-                            <h4 class="item_title">Currency Converter</h4>
-                            <!-- <p class="description">
-                                A simple and interactive password generator app using ReactJS
-                            </p> -->
-                            <a
-                                class="description certification_link"
-                                href="https://currency.princebansal.in"
-                                target="_blank"
-                                rel="noopener"
-                                >Try it Live</a
-                            >
+        </header>
+
+        <div class="nav__drawer" id="mobile-drawer" aria-label="Mobile menu">
+            <a href="#about">About</a>
+            <a href="#stack">Stack</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a
+                href="https://bit.ly/princebansal_ops2"
+                target="_blank"
+                rel="noopener"
+                >Resume ↗</a
+            >
+        </div>
+
+        <main id="main">
+            <!-- ============================================================
+                 HERO
+                 ============================================================ -->
+            <section id="hero" class="hero container">
+                <div class="hero__inner">
+                    <div class="hero__content">
+                        <div class="hero__badge">
+                            <span class="status-pill">
+                                <span class="status-pill__dot"></span>
+                                Open to new opportunities
+                            </span>
                         </div>
-                    </div>
-                    <div class="project_item">
-                        <div class="project_info">
-                            <h4 class="item_title">
-                                Random Password Generator
-                            </h4>
-                            <!-- <p class="description">
-                                A simple and interactive password generator app using ReactJS
-                            </p> -->
-                            <a
-                                class="description certification_link"
-                                href="https://passgen.princebansal.in"
-                                target="_blank"
-                                rel="noopener"
-                                >Try it Live</a
+
+                        <h1 class="hero__title">
+                            <span class="hero__title-line">Hi, I'm</span>
+                            <span class="hero__title-line gradient-text"
+                                >Prince Bansal.</span
                             >
+                        </h1>
+
+                        <div class="hero__role">
+                            <span>Platform Engineer</span>
+                            <span
+                                class="hero__role-sep"
+                                aria-hidden="true"
+                            ></span>
+                            <span>DevOps</span>
+                            <span
+                                class="hero__role-sep"
+                                aria-hidden="true"
+                            ></span>
+                            <span>Cloud</span>
+                            <span
+                                class="hero__role-sep"
+                                aria-hidden="true"
+                            ></span>
+                            <span>Backend</span>
                         </div>
-                    </div>
-                    <div class="project_item">
-                        <div class="project_info">
-                            <h4 class="item_title">Sorting Visualizer</h4>
-                            <!-- <p class="description">
-                                An interactive web-based sorting algorithm
-                                visualizer built using HTML, CSS, and
-                                JavaScript. This tool helps you understand how
-                                popular sorting algorithms work by displaying
-                                animated bars that rearrange themselves in real
-                                time as the algorithm progresses.
-                            </p> -->
+
+                        <p class="hero__description">
+                            I build and operate large-scale Kubernetes platforms
+                            across AWS, GCP & Azure — focused on automation,
+                            CI/CD, cost optimization and reliability
+                            engineering.
+                        </p>
+
+                        <div class="hero__actions">
                             <a
-                                class="description certification_link"
-                                href="https://sorting.princebansal.in"
+                                href="https://bit.ly/princebansal_ops2"
                                 target="_blank"
                                 rel="noopener"
-                                >Try it Live</a
+                                class="btn btn--primary"
                             >
+                                View Resume
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn btn--ghost">
+                                Get in touch
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="hero__meta">
+                            <span class="hero__meta-item">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0Z"
+                                    />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Chandigarh, India
+                            </span>
+                            <span class="hero__meta-item">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="4"
+                                        width="20"
+                                        height="16"
+                                        rx="2"
+                                    />
+                                    <path d="m22 7-10 5L2 7" />
+                                </svg>
+                                prince.bansal1914@gmail.com
+                            </span>
                         </div>
                     </div>
 
-                    <div class="project_item">
-                        <div class="project_info">
-                            <h4 class="item_title">Guess My Number Game</h4>
-                            <!-- <p class="description">
-                                A simple and interactive number guessing game
-                                built using vanilla JavaScript, HTML, and CSS.
-                                The user has to guess a randomly generated
-                                number between 1 and 20. With each guess, the
-                                game provides instant feedback
-                            </p> -->
-                            <a
-                                class="description certification_link"
-                                href="https://guessnum.princebansal.in"
-                                target="_blank"
-                                rel="noopener"
-                                >Try it Live</a
-                            >
+                    <div class="hero__portrait">
+                        <div class="hero__portrait-frame">
+                            <img
+                                src="./images/DP.webp"
+                                alt="Portrait of Prince Bansal"
+                                width="380"
+                                height="380"
+                                loading="eager"
+                                fetchpriority="high"
+                            />
+                            <div class="hero__portrait-tag">
+                                <span>@ Yellow.ai</span>
+                                <span class="hero__portrait-tag-loc">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M2 12h20" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                        />
+                                    </svg>
+                                    Multi-cloud
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="group-2">
-                <div class="skills">
-                    <h3 class="title">Technical Skills</h3>
-                    <ul class="skills_list description">
-                        <li>
-                            C++, Java, Python, Shell Scripting, SQL, Object
-                            Oriented Paradigms.
-                        </li>
-                        <li>
-                            HTML, CSS, Tailwind JavaScript, TypeScript, ReactJs,
-                            NodeJs, NextJs, MongoDB, Prisma.
-                        </li>
-                        <li>
-                            Terraform, Docker, Kubernetes, Karpenter, Jenkins,
-                            Ansible, Prometheus, Grafana
-                        </li>
-                        <li>
-                            Proficient in deploying infrastructure on AWS and
-                            GCP using IaC tools.
-                        </li>
-                    </ul>
+            </section>
+
+            <!-- ============================================================
+                 ABOUT
+                 ============================================================ -->
+            <section id="about" class="section about">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">About</span>
+                        <h2 class="section__title">
+                            Engineering reliable infrastructure at scale.
+                        </h2>
+                    </div>
+
+                    <div class="about__grid">
+                        <div class="about__copy reveal">
+                            <p>
+                                Software Engineer with experience operating
+                                multi-cloud infrastructure (AWS, GCP, Azure)
+                                and large-scale Kubernetes platforms in
+                                production. Specialized in automation, CI/CD,
+                                cost optimization, and reliability engineering,
+                                with hands-on expertise in Terraform, Ansible,
+                                Kubernetes (Karpenter), and observability
+                                using Prometheus.
+                            </p>
+                            <p>
+                                Proven experience in incident response,
+                                compliance-driven operations (SOC 2, PCI), and
+                                scripting with Python and Shell, with working
+                                exposure to ReactJS and NodeJS for platform
+                                tooling.
+                            </p>
+                        </div>
+
+                        <div class="about__stats reveal" style="--reveal-delay: 100ms;">
+                            <div class="stat">
+                                <span class="stat__num">8</span>
+                                <span class="stat__label">Global regions</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__num">500+</span>
+                                <span class="stat__label">Deployments</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__num">$10–12K</span>
+                                <span class="stat__label">Saved / month</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__num">90%</span>
+                                <span class="stat__label">Cost reduction</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="certification">
-                    <h3 class="title">certification</h3>
-                    <div class="certification_item">
-                        <p class="item_preTitle">2023-2026</p>
-                        <h4 class="item_title">
-                            Google Cloud Associate Cloud Engineer
-                        </h4>
+            </section>
+
+            <!-- ============================================================
+                 TECH STACK
+                 ============================================================ -->
+            <section id="stack" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">Tech Stack</span>
+                        <h2 class="section__title">Tools I work with daily.</h2>
+                        <p class="section__lede">
+                            From cloud platforms to observability — a curated
+                            stack honed across production environments.
+                        </p>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">Cloud Platforms</h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">AWS</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">GCP</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Azure</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Oracle Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">
+                            Containers &amp; Orchestration
+                        </h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Docker</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Kubernetes</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#22d3ee"
+                                        stroke-width="1.6"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polygon
+                                            points="12 2 2 7 12 12 22 7 12 2"
+                                        />
+                                        <polyline
+                                            points="2 17 12 22 22 17"
+                                        />
+                                        <polyline
+                                            points="2 12 12 17 22 12"
+                                        />
+                                    </svg>
+                                </span>
+                                <span class="stack__item-label">Karpenter</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Helm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">
+                            Infrastructure as Code &amp; Automation
+                        </h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Terraform</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Ansible</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Shell</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">CI/CD &amp; GitOps</h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Jenkins</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label"
+                                    >GitHub Actions</span
+                                >
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Git</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#22d3ee"
+                                        stroke-width="1.6"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z"
+                                        />
+                                        <path d="M12 7v5l3 2" />
+                                    </svg>
+                                </span>
+                                <span class="stack__item-label">Concourse</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">ArgoCD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">Observability</h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Prometheus</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Grafana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack__group reveal">
+                        <h3 class="stack__group-title">
+                            Languages &amp; Runtime
+                        </h3>
+                        <div class="stack__grid">
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Python</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Java</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">C++</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">TypeScript</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Node.js</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">React</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">MongoDB</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 EXPERIENCE
+                 ============================================================ -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">Experience</span>
+                        <h2 class="section__title">Where I've shipped.</h2>
+                        <p class="section__lede">
+                            Building, scaling and reliably operating
+                            multi-cloud platforms.
+                        </p>
+                    </div>
+
+                    <div class="timeline">
+                        <article class="timeline__item reveal">
+                            <span class="timeline__dot" aria-hidden="true"></span>
+                            <div class="timeline__card">
+                                <header class="timeline__header">
+                                    <h3 class="timeline__company">Yellow.ai</h3>
+                                    <span class="timeline__period"
+                                        >Jul 2025 — Present</span
+                                    >
+                                </header>
+                                <p class="timeline__role">
+                                    Software Development Engineer
+                                </p>
+                                <div class="timeline__body">
+                                    <p>
+                                        Managed multi-cloud infrastructure
+                                        (AWS, GCP, Azure) across 8 global
+                                        regions, supporting large-scale
+                                        migrations, upgrades, and
+                                        high-availability deployments.
+                                    </p>
+                                    <p>
+                                        Drove continuous cloud cost
+                                        optimization initiatives, achieving
+                                        <b>$10K–$12K</b> monthly savings
+                                        through VM right-sizing, Kubernetes
+                                        node optimization using Karpenter, and
+                                        disk/storage tuning across production
+                                        environments. Led AMD → ARM (Graviton)
+                                        migrations for Kubernetes workloads and
+                                        VM fleets using hardened OS images,
+                                        improving price-performance efficiency
+                                        and reducing infrastructure costs.
+                                    </p>
+                                    <p>
+                                        Actively participated in SOC 2 and PCI
+                                        compliance audits, conducting access
+                                        reviews, DR drills, and backup
+                                        validation across production
+                                        environments. Automated SOC 2 evidence
+                                        collection, saving hours of manual
+                                        effort each month and improving audit
+                                        readiness.
+                                        Strengthened platform security through
+                                        least-privilege IAM practices and
+                                        Kubernetes access controls.
+                                    </p>
+                                    <p>
+                                        Built and maintained Ansible-based
+                                        automation for infrastructure
+                                        operations, including node removal
+                                        based on health/state, security group
+                                        updates, and disk alert detection and
+                                        remediation. Developed
+                                        incident-response automation workflows
+                                        to reduce manual toil and improve MTTR.
+                                    </p>
+                                </div>
+                                <div class="timeline__impact">
+                                    <span class="chip chip--accent chip--dot"
+                                        >$10K–$12K/mo saved</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >8 regions</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >SOC 2 + PCI</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >AMD → ARM migration</span
+                                    >
+                                </div>
+                                <div class="tag-row">
+                                    <span class="chip">AWS</span>
+                                    <span class="chip">GCP</span>
+                                    <span class="chip">Azure</span>
+                                    <span class="chip">Kubernetes</span>
+                                    <span class="chip">Karpenter</span>
+                                    <span class="chip">Ansible</span>
+                                    <span class="chip">Terraform</span>
+                                    <span class="chip">Python</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="timeline__item reveal">
+                            <span class="timeline__dot" aria-hidden="true"></span>
+                            <div class="timeline__card">
+                                <header class="timeline__header">
+                                    <h3 class="timeline__company">
+                                        Quantiphi Analytics
+                                    </h3>
+                                    <span class="timeline__period"
+                                        >Jan 2023 — Jun 2025</span
+                                    >
+                                </header>
+                                <p class="timeline__role">Platform Engineer</p>
+                                <div class="timeline__body">
+                                    <p>
+                                        Led AWS-to-GCP migration of
+                                        <b>15 microservices</b>, achieving
+                                        <b>90% cost reduction</b>. Built
+                                        modular Terraform scripts, optimized
+                                        Cloud Build / Deploy pipelines for
+                                        <b>40% CI/CD efficiency gain</b>, and
+                                        improved scalability via Apigee Gateway
+                                        and Cloud Run integration.
+                                    </p>
+                                    <p>
+                                        Managed <b>300+ deployments</b> across
+                                        multi-environment pipelines (Concourse,
+                                        GitHub Actions), improving code
+                                        stability by 20%, reducing rollbacks
+                                        by 15%, and cutting manual promotion
+                                        effort by 70% — accelerating releases
+                                        by <b>60%</b>. Enhanced CI/CD pipelines
+                                        with automated validations,
+                                        infrastructure-aware deployments, and
+                                        rollback-safe release mechanisms.
+                                    </p>
+                                    <p>
+                                        Automated provisioning and
+                                        configuration of critical GCP services
+                                        (Pub/Sub, Cloud Scheduler, Logging,
+                                        Monitoring) with Terraform, increasing
+                                        reliability by 40% and reducing manual
+                                        errors by 50%.
+                                    </p>
+                                </div>
+                                <div class="timeline__impact">
+                                    <span class="chip chip--accent chip--dot"
+                                        >90% cost ↓</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >300+ deployments</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >60% faster releases</span
+                                    >
+                                    <span class="chip chip--accent chip--dot"
+                                        >15 microservices migrated</span
+                                    >
+                                </div>
+                                <div class="tag-row">
+                                    <span class="chip">GCP</span>
+                                    <span class="chip">AWS</span>
+                                    <span class="chip">Terraform</span>
+                                    <span class="chip">Cloud Run</span>
+                                    <span class="chip">Apigee</span>
+                                    <span class="chip">Concourse</span>
+                                    <span class="chip">GitHub Actions</span>
+                                    <span class="chip">Pub/Sub</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 CERTIFICATIONS
+                 ============================================================ -->
+            <section id="certs" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">Certifications</span>
+                        <h2 class="section__title">Industry-recognized credentials.</h2>
+                    </div>
+
+                    <div class="certs__grid">
                         <a
-                            class="description certification_link"
+                            class="cert reveal"
                             href="https://drive.google.com/file/d/1T7Pqw7rQrUJ_kyt12EsdPtIIYGnQsReM/view?usp=sharing"
                             target="_blank"
                             rel="noopener"
                         >
-                            Certified in GCP cloud platform
+                            <span class="cert__icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                    />
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.36.13.69.34 1 .61"
+                                    />
+                                </svg>
+                            </span>
+                            <div class="cert__content">
+                                <div class="cert__period">2023 — 2026</div>
+                                <h3 class="cert__title">
+                                    Google Cloud Associate Cloud Engineer
+                                </h3>
+                                <span class="cert__link"
+                                    >View credential</span
+                                >
+                            </div>
                         </a>
-                    </div>
-                    <div class="certification_item">
-                        <p class="item_preTitle">2024-2026</p>
-                        <h4 class="item_title">
-                            Hashicorp certified Cloud Engineer
-                        </h4>
+
                         <a
-                            class="description certification_link"
+                            class="cert reveal"
                             href="https://www.credly.com/badges/a60ba284-5043-4765-a891-bd6494b0c84e/public_url"
                             target="_blank"
                             rel="noopener"
-                            >Terraform Associate</a
                         >
+                            <span class="cert__icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                    />
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            </span>
+                            <div class="cert__content">
+                                <div class="cert__period">2024 — 2026</div>
+                                <h3 class="cert__title">
+                                    HashiCorp Terraform Associate
+                                </h3>
+                                <span class="cert__link"
+                                    >View credential</span
+                                >
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="edu">
-                    <h3 class="title">Education</h3>
-                    <div class="edu_item">
-                        <p class="item_preTitle">2020-2023</p>
-                        <h4 class="item_title">
-                            National Institute of Technology, Raipur
-                        </h4>
-                        <p class="item_subtitle">
-                            Master of Computer Application
+            </section>
+
+            <!-- ============================================================
+                 PROJECTS
+                 ============================================================ -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">Projects</span>
+                        <h2 class="section__title">Things I've built.</h2>
+                        <p class="section__lede">
+                            Small experiments and tools — built with vanilla web
+                            and modern JS.
                         </p>
                     </div>
-                    <div class="edu_item">
-                        <p class="item_preTitle">2016-2019</p>
-                        <h4 class="item_title">
-                            Panjab University, Chandigarh
-                        </h4>
-                        <p class="item_subtitle">
-                            Bachelor of Computer Application
-                        </p>
+
+                    <div class="projects__grid">
+                        <a
+                            href="https://currency.princebansal.in"
+                            target="_blank"
+                            rel="noopener"
+                            class="project reveal"
+                        >
+                            <div class="project__header">
+                                <span class="project__icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <line x1="12" y1="1" x2="12" y2="23" />
+                                        <path
+                                            d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                                        />
+                                    </svg>
+                                </span>
+                                <span class="project__arrow" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3 class="project__title">Currency Converter</h3>
+                            <p class="project__desc">
+                                Real-time currency conversion with a clean,
+                                responsive UI.
+                            </p>
+                            <span class="project__url"
+                                >currency.princebansal.in</span
+                            >
+                        </a>
+
+                        <a
+                            href="https://passgen.princebansal.in"
+                            target="_blank"
+                            rel="noopener"
+                            class="project reveal"
+                        >
+                            <div class="project__header">
+                                <span class="project__icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="11"
+                                            width="18"
+                                            height="11"
+                                            rx="2"
+                                            ry="2"
+                                        />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                    </svg>
+                                </span>
+                                <span class="project__arrow" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3 class="project__title">
+                                Random Password Generator
+                            </h3>
+                            <p class="project__desc">
+                                Configurable password generator with strength
+                                indicators and one-click copy.
+                            </p>
+                            <span class="project__url"
+                                >passgen.princebansal.in</span
+                            >
+                        </a>
+
+                        <a
+                            href="https://sorting.princebansal.in"
+                            target="_blank"
+                            rel="noopener"
+                            class="project reveal"
+                        >
+                            <div class="project__header">
+                                <span class="project__icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <line x1="4" y1="20" x2="4" y2="10" />
+                                        <line x1="10" y1="20" x2="10" y2="4" />
+                                        <line x1="16" y1="20" x2="16" y2="14" />
+                                        <line x1="22" y1="20" x2="22" y2="8" />
+                                    </svg>
+                                </span>
+                                <span class="project__arrow" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3 class="project__title">Sorting Visualizer</h3>
+                            <p class="project__desc">
+                                Interactive visualizer for classic sorting
+                                algorithms — animated bars in real time.
+                            </p>
+                            <span class="project__url"
+                                >sorting.princebansal.in</span
+                            >
+                        </a>
+
+                        <a
+                            href="https://guessnum.princebansal.in"
+                            target="_blank"
+                            rel="noopener"
+                            class="project reveal"
+                        >
+                            <div class="project__header">
+                                <span class="project__icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg>
+                                </span>
+                                <span class="project__arrow" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3 class="project__title">Guess My Number</h3>
+                            <p class="project__desc">
+                                A quick number-guessing game with instant
+                                feedback and a tidy state machine.
+                            </p>
+                            <span class="project__url"
+                                >guessnum.princebansal.in</span
+                            >
+                        </a>
                     </div>
                 </div>
-                <div class="awards">
-                    <h3 class="title">Awards</h3>
-                    <div class="awards_item">
-                        <p class="item_preTitle">June 2014</p>
-                        <h4 class="item_title">
-                            Silver Medal in Thang-Ta Martial Arts
-                        </h4>
-                        <p class="description">
-                            Won Silver medal of National Importance in Thang-Ta
-                            form of Martial Arts.
+            </section>
+
+            <!-- ============================================================
+                 GITHUB
+                 ============================================================ -->
+            <section id="github" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">GitHub</span>
+                        <h2 class="section__title">Open source &amp; activity.</h2>
+                        <p class="section__lede">
+                            Recent stats from my GitHub profile.
                         </p>
                     </div>
-                </div>
-                <div class="ref">
-                    <h3 class="title">Extracurricular</h3>
-                    <div class="ref_item">
-                        <h4 class="ref_name">Head Coordinator - NSS</h4>
-                        <p class="description">
-                            Worked as a Head Coordinator in NSS - NIT Raipur, in
-                            management department
-                        </p>
-                    </div>
-                </div>
-                <div class="interest">
-                    <h3 class="title">Interest</h3>
-                    <div class="interest_items">
-                        <div class="interest_item">
-                            <i data-feather="music" aria-hidden="true"></i>
-                            <span>Music</span>
+
+                    <!-- Contribution chart -->
+                    <div class="github__contrib reveal">
+                        <div class="github__card github__card--wide">
+                            <img
+                                src="https://ghchart.rshah.org/0e7490/princebansal7"
+                                alt="Prince Bansal's GitHub contribution chart"
+                                width="900"
+                                height="130"
+                                decoding="async"
+                                style="width:100%;height:auto;border-radius:8px;filter:saturate(0.7) brightness(0.82) contrast(1.05);"
+                            />
                         </div>
-                        <div class="interest_item">
-                            <i data-feather="book" aria-hidden="true"></i>
-                            <span>Manga</span>
-                        </div>
-                        <div class="interest_item">
-                            <i data-feather="map" aria-hidden="true"></i>
-                            <span>Travel</span>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <hr />
-            <div class="group-3">
-                <div class="contact">
-                    <h3 class="title">Contact</h3>
-                    <div class="contact_info">
-                        <p class="description">Chandigarh, India</p>
-                        <p class="description">prince.bansal1914@gmail.com</p>
-                        <p class="description">
-                            Feel free to reach out via Email or LinkedIn.
-                        </p>
+
+                    <!-- Metric badges -->
+                    <div class="github__badges reveal">
+                        <img
+                            src="https://img.shields.io/github/followers/princebansal7?style=flat-square&logo=github&label=Followers&color=1e4a5a&labelColor=1a1a1f&logoColor=71717a"
+                            alt="GitHub followers"
+                            height="22"
+                            decoding="async"
+                        />
+                        <img
+                            src="https://img.shields.io/badge/GitHub-princebansal7-1e4a5a?style=flat-square&logo=github&logoColor=71717a&labelColor=1a1a1f"
+                            alt="GitHub username"
+                            height="22"
+                            decoding="async"
+                        />
+                        <img
+                            src="https://img.shields.io/badge/Focus-Platform%20%26%20DevOps-1e3a5f?style=flat-square&labelColor=1a1a1f"
+                            alt="Focus area"
+                            height="22"
+                            decoding="async"
+                        />
+                        <img
+                            src="https://img.shields.io/badge/Cloud-AWS%20%7C%20GCP%20%7C%20Azure%20%7C%20OCI-1e3a5f?style=flat-square&labelColor=1a1a1f"
+                            alt="Cloud platforms"
+                            height="22"
+                            decoding="async"
+                        />
                     </div>
-                </div>
-                <div class="social">
-                    <h3 class="title">Socials</h3>
-                    <div class="social_items">
+
+                    <div class="github__footer reveal">
                         <a
                             href="https://github.com/princebansal7"
                             target="_blank"
                             rel="noopener"
-                            class="social_item github"
-                            aria-label="GitHub profile"
+                            class="github__profile-link"
                         >
-                            <i data-feather="github" aria-hidden="true"></i>
-                            <span>/princebansal7</span>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/princebansal07/"
-                            target="_blank"
-                            rel="noopener"
-                            class="social_item linkedin"
-                            aria-label="LinkedIn profile"
-                        >
-                            <i data-feather="linkedin" aria-hidden="true"></i>
-                            <span>/princebansal07</span>
-                        </a>
-                        <a
-                            href="https://youtube.com/playlist?list=PLvPu3SWhzo_RuZvUp5k2cus0pQGZtJX7A&si=XLClpHZzoh-Z0qDr"
-                            target="_blank"
-                            rel="noopener"
-                            class="social_item youtube"
-                            aria-label="YouTube channel"
-                        >
-                            <i data-feather="youtube" aria-hidden="true"></i>
-                            <span>/@princebansal_</span>
-                        </a>
-                        <a
-                            href="https://x.com/princebansal_"
-                            target="_blank"
-                            rel="noopener"
-                            class="social_item twitter"
-                            aria-label="X (Twitter) profile"
-                        >
-                            <i data-feather="twitter" aria-hidden="true"></i>
-                            <span>/princebansal_</span>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"
+                                />
+                            </svg>
+                            Visit GitHub Profile →
                         </a>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- ============================================================
+                 EDUCATION + BEYOND
+                 ============================================================ -->
+            <section id="more" class="section">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="section__eyebrow">More</span>
+                        <h2 class="section__title">Education &amp; beyond.</h2>
+                    </div>
+
+                    <div class="minor__grid">
+                        <div class="minor reveal">
+                            <div class="minor__label">Education</div>
+                            <div class="minor__row">
+                                <h3 class="minor__title">
+                                    National Institute of Technology, Raipur
+                                </h3>
+                                <p class="minor__sub">
+                                    Master of Computer Application
+                                </p>
+                                <p class="minor__period">2020 — 2023</p>
+                            </div>
+                            <div class="minor__row">
+                                <h3 class="minor__title">
+                                    Panjab University, Chandigarh
+                                </h3>
+                                <p class="minor__sub">
+                                    Bachelor of Computer Application
+                                </p>
+                                <p class="minor__period">2016 — 2019</p>
+                            </div>
+                        </div>
+
+                        <div class="minor reveal">
+                            <div class="minor__label">Recognition</div>
+                            <div class="minor__row">
+                                <h3 class="minor__title">
+                                    Silver Medal — Thang-Ta Martial Arts
+                                </h3>
+                                <p class="minor__sub">
+                                    Won Silver medal of National Importance in
+                                    the Thang-Ta form of Martial Arts.
+                                </p>
+                                <p class="minor__period">June 2014</p>
+                            </div>
+                            <div class="minor__row">
+                                <h3 class="minor__title">
+                                    Head Coordinator — NSS
+                                </h3>
+                                <p class="minor__sub">
+                                    Head Coordinator at NSS, NIT Raipur, in the
+                                    management department.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="minor reveal">
+                            <div class="minor__label">Beyond Code</div>
+                            <div class="minor__row">
+                                <h3 class="minor__title">Music · Manga · Travel</h3>
+                                <p class="minor__sub">
+                                    When I'm not in the terminal, I'm probably
+                                    listening to music, reading manga, or
+                                    exploring a new place.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 CONTACT
+                 ============================================================ -->
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <div class="contact__card reveal">
+                        <div class="contact__inner">
+                            <div>
+                                <span class="section__eyebrow">Contact</span>
+                                <h2 class="contact__title">
+                                    Let's build something reliable.
+                                </h2>
+                                <p class="contact__lede">
+                                    Got a platform or infra problem worth
+                                    solving? I'd love to hear about it. Reach
+                                    out via email or LinkedIn.
+                                </p>
+                                <a
+                                    href="mailto:prince.bansal1914@gmail.com"
+                                    class="contact__email"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="2"
+                                            y="4"
+                                            width="20"
+                                            height="16"
+                                            rx="2"
+                                        />
+                                        <path d="m22 7-10 5L2 7" />
+                                    </svg>
+                                    prince.bansal1914@gmail.com
+                                </a>
+                            </div>
+
+                            <div class="socials">
+                                <a
+                                    href="https://github.com/princebansal7"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="social social--github"
+                                    aria-label="GitHub"
+                                >
+                                    <svg
+                                        class="social__icon"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"
+                                        />
+                                    </svg>
+                                    <span>GitHub</span>
+                                    <span class="social__handle"
+                                        >/princebansal7</span
+                                    >
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/princebansal07/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="social social--linkedin"
+                                    aria-label="LinkedIn"
+                                >
+                                    <svg
+                                        class="social__icon"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.22 0z"
+                                        />
+                                    </svg>
+                                    <span>LinkedIn</span>
+                                    <span class="social__handle"
+                                        >/princebansal07</span
+                                    >
+                                </a>
+                                <a
+                                    href="https://x.com/princebansal_"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="social social--twitter"
+                                    aria-label="X / Twitter"
+                                >
+                                    <svg
+                                        class="social__icon"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                        />
+                                    </svg>
+                                    <span>X (Twitter)</span>
+                                    <span class="social__handle"
+                                        >/princebansal_</span
+                                    >
+                                </a>
+                                <a
+                                    href="https://youtube.com/playlist?list=PLvPu3SWhzo_RuZvUp5k2cus0pQGZtJX7A&si=XLClpHZzoh-Z0qDr"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="social social--youtube"
+                                    aria-label="YouTube"
+                                >
+                                    <svg
+                                        class="social__icon"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M23.498 6.186a3 3 0 0 0-2.112-2.122C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.564A3 3 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3 3 0 0 0 2.112 2.122C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.564a3 3 0 0 0 2.112-2.122C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.568V8.432L15.818 12z"
+                                        />
+                                    </svg>
+                                    <span>YouTube</span>
+                                    <span class="social__handle"
+                                        >/@princebansal_</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <!-- Defer Feather Icons for non-blocking load -->
-        <script src="https://unpkg.com/feather-icons" defer></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                if (window.feather) feather.replace();
-            });
-        </script>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer class="footer">
+            <div class="container footer__inner">
+                <div class="footer__brand">
+                    <span class="nav__logo-mark" aria-hidden="true">PB</span>
+                    <span
+                        >© <span id="year"></span> Prince Bansal · All rights
+                        reserved.</span
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./js/main.js" defer></script>
     </body>
 </html>
