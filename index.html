@@ -4,16 +4,16 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prince Bansal | Platform & DevOps Engineer</title>
+        <title>Prince Bansal | SDE - Platform Engineer</title>
 
         <!-- SEO -->
         <meta
             name="description"
-            content="Prince Bansal — Platform, DevOps & Cloud Engineer. I operate multi-cloud Kubernetes platforms at scale across AWS, GCP and Azure. Specialized in Terraform, CI/CD, automation, cost optimization and reliability engineering."
+            content="Prince Bansal — SDE. I operate multi-cloud Kubernetes platforms at scale across AWS, GCP and Azure. Specialized in Terraform, CI/CD, automation, cost optimization and reliability engineering."
         />
         <meta
             name="keywords"
-            content="Prince Bansal, Platform Engineer, DevOps Engineer, Cloud Engineer, SRE, Kubernetes, Terraform, AWS, GCP, Azure, CI/CD, GitOps, Karpenter, Ansible, Prometheus, Infrastructure Automation, Portfolio"
+            content="Prince Bansal, SDE, DevOps Engineer, Cloud Engineer, SRE, Kubernetes, Terraform, AWS, GCP, Azure, CI/CD, GitOps, Karpenter, Ansible, Prometheus, Infrastructure Automation, Portfolio"
         />
         <meta name="author" content="Prince Bansal" />
         <meta name="theme-color" content="#0a0a0b" />
@@ -25,30 +25,30 @@
         <!-- Open Graph / Twitter -->
         <meta
             property="og:title"
-            content="Prince Bansal | Platform & DevOps Engineer"
+            content="Prince Bansal | SDE"
         />
         <meta
             property="og:description"
-            content="Platform, DevOps & Cloud Engineer specializing in Kubernetes, Terraform, multi-cloud infrastructure, CI/CD and reliability engineering."
+            content="SDE specializing in Kubernetes, Terraform, multi-cloud infrastructure, CI/CD and reliability engineering."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princebansal.in/" />
         <meta
             property="og:image"
-            content="https://princebansal.in/images/DP.webp"
+            content="https://princebansal.in/images/image.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Prince Bansal | Platform & DevOps Engineer"
+            content="Prince Bansal | SDE"
         />
         <meta
             name="twitter:description"
-            content="Platform, DevOps & Cloud Engineer — Kubernetes, Terraform, multi-cloud infra, CI/CD, reliability."
+            content="SDE — Kubernetes, Terraform, multi-cloud infra, CI/CD, reliability."
         />
         <meta
             name="twitter:image"
-            content="https://princebansal.in/images/DP.webp"
+            content="https://princebansal.in/images/image.jpg"
         />
 
         <!-- Favicon -->
@@ -60,9 +60,9 @@
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": "Prince Bansal",
-                "jobTitle": "Platform & DevOps Engineer",
+                "jobTitle": "SDE",
                 "url": "https://princebansal.in/",
-                "image": "https://princebansal.in/images/DP.webp",
+                "image": "https://princebansal.in/images/image.jpg",
                 "email": "mailto:prince.bansal1914@gmail.com",
                 "sameAs": [
                     "https://github.com/princebansal7",
@@ -91,12 +91,6 @@
         </script>
 
         <!-- Preload critical assets -->
-        <link
-            rel="preload"
-            as="image"
-            href="./images/DP.webp"
-            imagesrcset="./images/DP.webp 380w"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
@@ -134,46 +128,32 @@
                 overflow-x: hidden;
                 -webkit-font-smoothing: antialiased;
             }
-            .bg-grid,
+            .bg-stars,
             .bg-glow {
                 position: fixed;
                 inset: 0;
                 z-index: 0;
                 pointer-events: none;
             }
-            .bg-grid {
-                background-image: linear-gradient(
-                        rgba(255, 255, 255, 0.025) 1px,
-                        transparent 1px
-                    ),
-                    linear-gradient(
-                        90deg,
-                        rgba(255, 255, 255, 0.025) 1px,
-                        transparent 1px
-                    );
-                background-size: 56px 56px;
-                mask-image: radial-gradient(
-                    ellipse 90% 60% at 50% 15%,
-                    #000 30%,
-                    transparent 80%
-                );
-                -webkit-mask-image: radial-gradient(
-                    ellipse 90% 60% at 50% 15%,
-                    #000 30%,
-                    transparent 80%
-                );
+            .bg-stars {
+                display: block;
             }
             .bg-glow {
                 background:
                     radial-gradient(
-                        circle 620px at 82% -10%,
-                        rgba(34, 211, 238, 0.12),
-                        transparent 60%
+                        ellipse 55% 40% at 78% 5%,
+                        rgba(34, 211, 238, 0.1),
+                        transparent 65%
                     ),
                     radial-gradient(
-                        circle 720px at -5% 8%,
-                        rgba(59, 130, 246, 0.10),
-                        transparent 60%
+                        ellipse 50% 35% at 10% 15%,
+                        rgba(59, 130, 246, 0.09),
+                        transparent 65%
+                    ),
+                    radial-gradient(
+                        ellipse 35% 30% at 50% 60%,
+                        rgba(34, 211, 238, 0.04),
+                        transparent 70%
                     );
             }
             .nav {
@@ -203,7 +183,7 @@
         <a class="skip-link" href="#main">Skip to content</a>
 
         <!-- Background layers -->
-        <div class="bg-grid" aria-hidden="true"></div>
+        <canvas class="bg-stars" id="bg-stars" aria-hidden="true"></canvas>
         <div class="bg-glow" aria-hidden="true"></div>
         <div class="bg-noise" aria-hidden="true"></div>
 
@@ -213,7 +193,6 @@
         <header class="nav" role="banner">
             <div class="nav__inner">
                 <a href="#" class="nav__logo" aria-label="Prince Bansal — home">
-                    <span class="nav__logo-mark" aria-hidden="true">PB</span>
                     <span class="nav__logo-text">Prince Bansal</span>
                 </a>
 
@@ -299,14 +278,14 @@
                         </div>
 
                         <h1 class="hero__title">
-                            <span class="hero__title-line">Hi, I'm</span>
+                            <span class="hero__title-line">Hi<span class="hero__comma">,</span> I'm</span>
                             <span class="hero__title-line gradient-text"
                                 >Prince Bansal.</span
                             >
                         </h1>
 
                         <div class="hero__role">
-                            <span>Platform Engineer</span>
+                            <span>SDE</span>
                             <span
                                 class="hero__role-sep"
                                 aria-hidden="true"
@@ -411,37 +390,37 @@
                         </div>
                     </div>
 
-                    <div class="hero__portrait">
-                        <div class="hero__portrait-frame">
-                            <img
-                                src="./images/DP.webp"
-                                alt="Portrait of Prince Bansal"
-                                width="380"
-                                height="380"
-                                loading="eager"
-                                fetchpriority="high"
-                            />
-                            <div class="hero__portrait-tag">
-                                <span>@ Yellow.ai</span>
-                                <span class="hero__portrait-tag-loc">
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        aria-hidden="true"
-                                    >
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path d="M2 12h20" />
-                                        <path
-                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                                        />
-                                    </svg>
-                                    Multi-cloud
-                                </span>
-                            </div>
+                    <div class="hero__terminal">
+                        <div class="hero__terminal-bar">
+                            <span class="hero__terminal-dot" style="--dot-color:#ff5f57"></span>
+                            <span class="hero__terminal-dot" style="--dot-color:#febc2e"></span>
+                            <span class="hero__terminal-dot" style="--dot-color:#28c840"></span>
+                            <span class="hero__terminal-title">bash — production · princebansal_</span>
+                        </div>
+                        <div class="hero__terminal-body">
+                            <div><span class="t-prompt">$</span><span class="t-cmd"> kubectl get nodes -L kubernetes.io/arch</span></div>
+                            <div class="t-out"><span class="t-key">NAME                STATUS   AGE  ARCH</span></div>
+                            <div class="t-out">prod-aws-us-east-1  <span class="t-green">Ready</span>    1d   arm64</div>
+                            <div class="t-out">prod-gcp-eu-west-1  <span class="t-green">Ready</span>    9d   amd64</div>
+                            <div class="t-out">prod-az-ap-south-1  <span class="t-green">Ready</span>    3d   arm64</div>
+                            <div class="t-spacer"></div>
+                            <div><span class="t-prompt">$</span><span class="t-cmd"> terraform apply <span class="t-flag">--auto-approve</span></span></div>
+                            <div class="t-out"><span class="t-green">✓</span> Apply complete! 8 added, 2 changed, 0 destroyed.</div>
+                            <div class="t-spacer"></div>
+                            <div><span class="t-prompt">$</span><span class="t-cmd"> echo $MONTHLY_SAVINGS</span></div>
+                            <div class="t-out"><span class="t-cyan">$10K–$12K</span> · 8 regions · 99.9% uptime</div>
+                            <div class="t-spacer"></div>
+                            <div><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
+                        </div>
+                        <div class="hero__terminal-footer">
+                            <span class="hero__terminal-footer-item">
+                                <span class="hero__terminal-status"></span>
+                                Yellow.ai
+                            </span>
+                            <span class="hero__terminal-footer-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Multi-cloud
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -1574,9 +1553,7 @@
                                         />
                                     </svg>
                                     <span>GitHub</span>
-                                    <span class="social__handle"
-                                        >/princebansal7</span
-                                    >
+                                    <span class="social__handle">/princebansal7</span>
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/princebansal07/"
@@ -1596,9 +1573,7 @@
                                         />
                                     </svg>
                                     <span>LinkedIn</span>
-                                    <span class="social__handle"
-                                        >/princebansal07</span
-                                    >
+                                    <span class="social__handle">/princebansal07</span>
                                 </a>
                                 <a
                                     href="https://x.com/princebansal_"
@@ -1618,9 +1593,7 @@
                                         />
                                     </svg>
                                     <span>X (Twitter)</span>
-                                    <span class="social__handle"
-                                        >/princebansal_</span
-                                    >
+                                    <span class="social__handle">/princebansal_</span>
                                 </a>
                                 <a
                                     href="https://youtube.com/playlist?list=PLvPu3SWhzo_RuZvUp5k2cus0pQGZtJX7A&si=XLClpHZzoh-Z0qDr"
@@ -1640,9 +1613,7 @@
                                         />
                                     </svg>
                                     <span>YouTube</span>
-                                    <span class="social__handle"
-                                        >/@princebansal_</span
-                                    >
+                                    <span class="social__handle">/@princebansal_</span>
                                 </a>
                             </div>
                         </div>
@@ -1657,7 +1628,6 @@
         <footer class="footer">
             <div class="container footer__inner">
                 <div class="footer__brand">
-                    <span class="nav__logo-mark" aria-hidden="true">PB</span>
                     <span
                         >© <span id="year"></span> Prince Bansal · All rights
                         reserved.</span
