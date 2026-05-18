@@ -1099,3 +1099,15 @@
 .footer__tech .accent {
     color: var(--accent-soft);
 }
+
+#year {
+    color: var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+#year:hover {
+    color: #67e8f9;
+    border-color: rgba(103, 232, 249, 0.7);
+}

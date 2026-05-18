@@ -283,25 +283,26 @@
             "color:#4ade80;font-family:monospace;font-size:11px;"
         );
 
-        // 2. Konami code → ACCESS GRANTED overlay
-        const KONAMI = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
-        let ki = 0;
+        // 2. Type "hire" anywhere → ACCESS GRANTED overlay
+        let hireBuf = "";
         document.addEventListener("keydown", (e) => {
-            ki = e.key === KONAMI[ki] ? ki + 1 : (e.key === KONAMI[0] ? 1 : 0);
-            if (ki === KONAMI.length) {
-                ki = 0;
-                const ov = document.createElement("div");
-                ov.className = "easter-konami";
-                ov.innerHTML = `<div class="easter-konami__inner">
-                    <div class="easter-konami__title">ACCESS GRANTED</div>
-                    <div class="easter-konami__sub">sudo su - prince_bansal · Welcome to prod 🚀</div>
-                </div>`;
-                document.body.appendChild(ov);
-                requestAnimationFrame(() => ov.classList.add("is-visible"));
-                setTimeout(() => {
-                    ov.classList.add("is-leaving");
-                    ov.addEventListener("transitionend", () => ov.remove(), { once: true });
-                }, 2800);
+            if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+                hireBuf = (hireBuf + e.key).slice(-4);
+                if (hireBuf.toLowerCase() === "hire") {
+                    hireBuf = "";
+                    const ov = document.createElement("div");
+                    ov.className = "easter-konami";
+                    ov.innerHTML = `<div class="easter-konami__inner">
+                        <div class="easter-konami__title">ACCESS GRANTED</div>
+                        <div class="easter-konami__sub">sudo su - prince_bansal · Welcome to prod 🚀</div>
+                    </div>`;
+                    document.body.appendChild(ov);
+                    requestAnimationFrame(() => ov.classList.add("is-visible"));
+                    setTimeout(() => {
+                        ov.classList.add("is-leaving");
+                        ov.addEventListener("transitionend", () => ov.remove(), { once: true });
+                    }, 2800);
+                }
             }
         });
 
@@ -311,7 +312,7 @@
             if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
                 sudoBuf = (sudoBuf + e.key).slice(-4);
                 if (sudoBuf.toLowerCase() === "sudo") {
-                    showToast("sudo: permission denied — try a cover letter instead 😏");
+                    showToast("sudo: permission denied — need to hire me first 😏");
                     sudoBuf = "";
                 }
             }
@@ -346,7 +347,7 @@
                         setTimeout(() => {
                             const out = document.createElement("div");
                             out.className = "t-out";
-                            out.innerHTML = `up <span class="t-cyan">847 days</span>, load avg: 0.01 🟢`;
+                            out.innerHTML = `up <span class="t-cyan">69 days</span>, load avg: 0.01 🟢`;
                             const spacer = document.createElement("div");
                             spacer.className = "t-spacer";
                             termBody.insertBefore(out, lastLine);
@@ -354,7 +355,7 @@
                         }, 280);
                     }
                 }, 75);
-            }, 14000);
+            }, 7000);
             // cancel if user scrolls away
             window.addEventListener("scroll", () => clearTimeout(idleTimer), { once: true, passive: true });
         }
