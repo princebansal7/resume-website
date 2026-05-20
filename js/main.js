@@ -15,15 +15,23 @@
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    /* -------- Shared scroll state (single listener used by nav + star field) -------- */
+    let pageScrollY = 0;
+    const scrollCallbacks = [];
+    window.addEventListener("scroll", () => {
+        pageScrollY = window.scrollY;
+        for (const cb of scrollCallbacks) cb(pageScrollY);
+    }, { passive: true });
+
     /* -------- Sticky nav state -------- */
     const nav = document.querySelector(".nav");
     if (nav) {
-        const onScroll = () => {
-            if (window.scrollY > 8) nav.classList.add("nav--scrolled");
+        const onScroll = (y = window.scrollY) => {
+            if (y > 8) nav.classList.add("nav--scrolled");
             else nav.classList.remove("nav--scrolled");
         };
         onScroll();
-        window.addEventListener("scroll", onScroll, { passive: true });
+        scrollCallbacks.push(onScroll);
     }
 
     /* -------- Mobile drawer -------- */
@@ -152,7 +160,7 @@
 
         const TOTAL = 180;
         const CLUSTER_N = 3;
-        let stars = [], W, H, scrollY = 0;
+        let stars = [], W, H;
 
         function gauss(mean, std) {
             let u = 0, v = 0;
@@ -226,7 +234,7 @@
             const time = t * 0.001;
 
             for (const s of stars) {
-                const py = ((s.y - scrollY * s.depth) % H + H) % H;
+                const py = ((s.y - pageScrollY * s.depth) % H + H) % H;
                 const a = prefersReducedMotion
                     ? s.base
                     : s.base * (0.55 + 0.45 * Math.sin(time * s.speed + s.phase));
@@ -250,7 +258,6 @@
             if (!prefersReducedMotion) requestAnimationFrame(draw);
         }
 
-        window.addEventListener("scroll", () => { scrollY = window.scrollY; }, { passive: true });
         window.addEventListener("resize", () => { build(); if (prefersReducedMotion) draw(0); }, { passive: true });
         build();
         requestAnimationFrame(draw);
@@ -277,19 +284,20 @@
             "color:#22d3ee;font-family:monospace;font-size:10px;line-height:1.2;"
         );
         console.log(
-            "%cHey, you found the console 👀\n%c$ kubectl get secrets --namespace=princebansal\n%c  coffee-level     →  ∞\n  uptime           →  99.9%%\n  birthday         →  19/03/1998\n  open-to-work     →  true",
+            "%cHey, you found the console 👀\n%c$ kubectl get secrets --namespace=princebansal\n%c  coffee-level     →  ∞\n  uptime           →  99.9%%\n  open-to-work     →  true",
             "color:#e4e4e7;font-size:13px;font-weight:600;",
             "color:#71717a;font-family:monospace;font-size:11px;",
             "color:#4ade80;font-family:monospace;font-size:11px;"
         );
 
-        // 2. Type "hire" anywhere → ACCESS GRANTED overlay
-        let hireBuf = "";
+        // 2 & 3. Type "hire" → ACCESS GRANTED overlay / type "sudo" → toast (single listener)
+        let keyBuf = "";
         document.addEventListener("keydown", (e) => {
             if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
-                hireBuf = (hireBuf + e.key).slice(-4);
-                if (hireBuf.toLowerCase() === "hire") {
-                    hireBuf = "";
+                keyBuf = (keyBuf + e.key).slice(-4);
+                const lower = keyBuf.toLowerCase();
+                if (lower === "hire") {
+                    keyBuf = "";
                     const ov = document.createElement("div");
                     ov.className = "easter-konami";
                     ov.innerHTML = `<div class="easter-konami__inner">
@@ -302,18 +310,9 @@
                         ov.classList.add("is-leaving");
                         ov.addEventListener("transitionend", () => ov.remove(), { once: true });
                     }, 2800);
-                }
-            }
-        });
-
-        // 3. Type "sudo" anywhere → toast
-        let sudoBuf = "";
-        document.addEventListener("keydown", (e) => {
-            if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
-                sudoBuf = (sudoBuf + e.key).slice(-4);
-                if (sudoBuf.toLowerCase() === "sudo") {
+                } else if (lower === "sudo") {
+                    keyBuf = "";
                     showToast("sudo: permission denied — need to hire me first 😏");
-                    sudoBuf = "";
                 }
             }
         });
@@ -347,7 +346,7 @@
                         setTimeout(() => {
                             const out = document.createElement("div");
                             out.className = "t-out";
-                            out.innerHTML = `up <span class="t-cyan">69 days</span>, load avg: 0.01 🟢`;
+                            out.innerHTML = `up <span class="t-cyan">69 days</span>, load avg: 0.01`;
                             const spacer = document.createElement("div");
                             spacer.className = "t-spacer";
                             termBody.insertBefore(out, lastLine);
@@ -375,14 +374,4 @@
     /* -------- Update copyright year -------- */
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    /* -------- Initialize Feather icons (if available) -------- */
-    const initFeather = () => {
-        if (window.feather) window.feather.replace({ "stroke-width": 1.6 });
-    };
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initFeather);
-    } else {
-        initFeather();
-    }
 })();

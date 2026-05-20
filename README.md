@@ -12,7 +12,7 @@ Six hidden interactions for the curious:
 
 | # | How to trigger | What happens |
 |---|---------------|--------------|
-| 1 | Open browser **DevTools → Console** | ASCII "PB" logo + `kubectl get secrets` output revealing coffee level, uptime, birthday `19/03/1998`, and `open-to-work: true` |
+| 1 | Open browser **DevTools → Console** | ASCII "PB" logo + `kubectl get secrets` output revealing coffee level, uptime, and `open-to-work: true` |
 | 2 | Type **`hire`** anywhere on the page | Full-screen `ACCESS GRANTED` flash with cyan glow pulse |
 | 3 | Type **`sudo`** anywhere on the page | Toast: *"sudo: permission denied — need to hire me first 😏"* |
 | 4 | **Click the green dot** in the terminal footer | Toast: *"Last incident: never 🤞 (knock on wood)"* |
