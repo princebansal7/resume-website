@@ -302,7 +302,7 @@
                     ov.className = "easter-konami";
                     ov.innerHTML = `<div class="easter-konami__inner">
                         <div class="easter-konami__title">ACCESS GRANTED</div>
-                        <div class="easter-konami__sub">sudo su - prince_bansal · Welcome to prod 🚀</div>
+                        <div class="easter-konami__sub">sudo su - princebansal · Welcome to prod 🚀</div>
                     </div>`;
                     document.body.appendChild(ov);
                     requestAnimationFrame(() => ov.classList.add("is-visible"));
@@ -327,7 +327,7 @@
             );
         }
 
-        // 5. Idle terminal — auto-types a command after 14s
+        // 5. Idle terminal — auto-types a command after 7s
         const termBody = document.querySelector(".hero__terminal-body");
         if (termBody && !prefersReducedMotion) {
             const idleTimer = setTimeout(() => {
