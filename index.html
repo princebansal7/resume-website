@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prince Bansal | Software Engineer</title>
+        <title>Prince Bansal | Platform / SRE Engineer</title>
 
         <!-- SEO -->
         <meta
@@ -25,11 +25,11 @@
         <!-- Open Graph / Twitter -->
         <meta
             property="og:title"
-            content="Prince Bansal | Software Engineer"
+            content="Prince Bansal | Platform / SRE Engineer"
         />
         <meta
             property="og:description"
-            content="Software Engineer specializing in Kubernetes, Terraform, multi-cloud infrastructure, CI/CD and reliability engineering."
+            content="Platform / SRE Engineer specializing in Kubernetes, Terraform, multi-cloud infrastructure, observability and reliability engineering."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princebansal.in/" />
@@ -40,11 +40,11 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Prince Bansal | Software Engineer"
+            content="Prince Bansal | Platform / SRE Engineer"
         />
         <meta
             name="twitter:description"
-            content="Software Engineer — Kubernetes, Terraform, multi-cloud infra, CI/CD, reliability."
+            content="Platform / SRE Engineer — Kubernetes, Terraform, multi-cloud infra, observability, reliability."
         />
         <meta
             name="twitter:image"
@@ -60,7 +60,7 @@
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": "Prince Bansal",
-                "jobTitle": "Software Engineer",
+                "jobTitle": "Platform / SRE Engineer",
                 "url": "https://princebansal.in/",
                 "image": "https://princebansal.in/images/image.jpg",
                 "email": "mailto:prince.bansal1914@gmail.com",
@@ -185,6 +185,8 @@
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
 
+        <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
         <!-- Background layers -->
         <canvas class="bg-stars" id="bg-stars" aria-hidden="true"></canvas>
         <div class="bg-glow" aria-hidden="true"></div>
@@ -288,6 +290,11 @@
                         </h1>
 
                         <div class="hero__role">
+                            <span>Platform / SRE</span>
+                            <span
+                                class="hero__role-sep"
+                                aria-hidden="true"
+                            ></span>
                             <span>SDE</span>
                             <span
                                 class="hero__role-sep"
@@ -661,6 +668,18 @@
                             <div class="stack__item">
                                 <span class="stack__item-icon">
                                     <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Python</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
                                         alt=""
                                         width="32"
@@ -786,6 +805,58 @@
                                 </span>
                                 <span class="stack__item-label">Grafana</span>
                             </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-plain.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Elasticsearch</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/logstash/logstash-plain.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">Logstash</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clickhouse/clickhouse-plain.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">ClickHouse</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon" aria-hidden="true">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#22d3ee"
+                                        stroke-width="1.6"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                                    </svg>
+                                </span>
+                                <span class="stack__item-label">OpsGenie</span>
+                            </div>
                         </div>
                     </div>
 
@@ -821,18 +892,6 @@
                             <div class="stack__item">
                                 <span class="stack__item-icon">
                                     <img
-                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                        alt=""
-                                        width="32"
-                                        height="32"
-                                        loading="lazy"
-                                    />
-                                </span>
-                                <span class="stack__item-label">Java</span>
-                            </div>
-                            <div class="stack__item">
-                                <span class="stack__item-icon">
-                                    <img
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
                                         alt=""
                                         width="32"
@@ -853,6 +912,18 @@
                                     />
                                 </span>
                                 <span class="stack__item-label">TypeScript</span>
+                            </div>
+                            <div class="stack__item">
+                                <span class="stack__item-icon">
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                        loading="lazy"
+                                    />
+                                </span>
+                                <span class="stack__item-label">JavaScript</span>
                             </div>
                             <div class="stack__item">
                                 <span class="stack__item-icon">
@@ -936,27 +1007,28 @@
                                 </p>
                                 <div class="timeline__body">
                                     <p>
-                                        Operate production Kubernetes
+                                        Operated production Kubernetes
                                         infrastructure across <b>9 global
                                         regions</b> on multi-cloud AWS, GCP,
                                         Azure and OCI, covering cluster
-                                        upgrades, DR drills and service
-                                        migrations, with Terraform, Ansible and
-                                        Python automation.
+                                        upgrades, DR drills, service migrations
+                                        and high-availability deployments, with
+                                        Terraform/Ansible and Python
+                                        automations.
                                     </p>
                                     <p>
                                         Stood up <b>2 new production regions on
                                         OCI</b>, including databases, Vault,
-                                        monitoring and tracing — extending
+                                        monitoring and tracing. This extended
                                         production onto a new cloud provider.
                                     </p>
                                     <p>
-                                        Built and own the <b>Synthetics test
+                                        Built and owned the <b>Synthetics test
                                         platform</b> (thousands of backend API
                                         and UI tests daily). Fixed multi-region
                                         failures and rebuilt alert trust by
                                         removing false pages and restoring
-                                        OpsGenie/Slack and Grafana alerting.
+                                        OpsGenie/Slack and Grafana.
                                     </p>
                                     <p>
                                         Drove continuous cloud cost
@@ -967,35 +1039,47 @@
                                         disk/storage tuning across production
                                         environments. Led AMD → ARM (Graviton)
                                         migrations for Kubernetes workloads and
-                                        VM fleets using hardened OS images,
+                                        VM fleets using CIS-hardened images,
                                         improving price-performance efficiency
                                         and reducing infrastructure costs.
                                     </p>
                                     <p>
-                                        Actively participated in SOC 2 and PCI
-                                        compliance audits, conducting access
-                                        reviews, DR drills, and backup
-                                        validation across production
-                                        environments. Automated SOC 2 evidence
-                                        collection, saving hours of manual
-                                        effort each month and improving audit
-                                        readiness.
-                                        Strengthened platform security through
-                                        least-privilege IAM practices and
+                                        Maintained Prometheus/Grafana
+                                        observability, OpsGenie on-call and
+                                        automated TLS-expiry alerting across all
+                                        regions.
+                                    </p>
+                                    <p>
+                                        Built a <b>NodeNotReady
+                                        auto-remediation</b> workflow that
+                                        self-healed unhealthy nodes across all
+                                        regions without paging on-call, and
+                                        root-caused critical production
+                                        incidents.
+                                    </p>
+                                    <p>
+                                        Supported SOC 2 and PCI compliance
+                                        audits with monthly access reviews, DR
+                                        drills and backup validation across
+                                        production environments, and automated
+                                        evidence collection with Selenium,
+                                        saving hours each month and improving
+                                        audit readiness.
+                                    </p>
+                                    <p>
+                                        Strengthened platform security by
+                                        running Vault, least-privilege IAM and
                                         Kubernetes access controls.
                                     </p>
                                     <p>
-                                        Maintain Prometheus/Grafana
-                                        observability, OpsGenie on-call and
-                                        automated TLS-expiry alerting across all
-                                        regions. Built a <b>NodeNotReady
-                                        auto-remediation</b> workflow that
-                                        self-heals unhealthy nodes without
-                                        paging on-call, alongside Ansible
-                                        automation for security group updates
-                                        and disk alert remediation, and
-                                        root-caused critical production
-                                        incidents.
+                                        Built and maintained Ansible-based
+                                        automation for infrastructure
+                                        operations, including node removal
+                                        based on health/state, security group
+                                        updates, and disk alert detection and
+                                        remediation. Developed
+                                        incident-response automation workflows
+                                        to reduce manual toil and improve MTTR.
                                     </p>
                                 </div>
                                 <div class="timeline__impact">

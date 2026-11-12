@@ -4,6 +4,7 @@
    · scrollspy (active nav link)
    · scroll-reveal via IntersectionObserver
    · mobile drawer toggle
+   · scroll progress line + eased star parallax
    · subtle parallax on hero glow
    Respects prefers-reduced-motion.
    ============================================================ */
@@ -22,6 +23,54 @@
         pageScrollY = window.scrollY;
         for (const cb of scrollCallbacks) cb(pageScrollY);
     }, { passive: true });
+
+    /* -------- Scroll progress line (transform only, one write per frame) -------- */
+    const progressBar = document.getElementById("scroll-progress");
+    if (progressBar) {
+        let progressQueued = false;
+        const updateProgress = () => {
+            progressQueued = false;
+            const max =
+                document.documentElement.scrollHeight - window.innerHeight;
+            const p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+            progressBar.style.transform = `scaleX(${p})`;
+        };
+        const queueProgress = () => {
+            if (progressQueued) return;
+            progressQueued = true;
+            requestAnimationFrame(updateProgress);
+        };
+        scrollCallbacks.push(queueProgress);
+        window.addEventListener("resize", queueProgress, { passive: true });
+        updateProgress();
+    }
+
+    /* -------- Hero depth: content drifts, shrinks and fades as you scroll away -------- */
+    const heroEl = document.getElementById("hero");
+    const heroInner = document.querySelector(".hero__inner");
+    if (heroEl && heroInner && !prefersReducedMotion) {
+        const heroWide = window.matchMedia("(min-width: 881px)");
+        let heroQueued = false;
+        const applyHero = () => {
+            heroQueued = false;
+            if (!heroWide.matches) {
+                heroInner.style.transform = "";
+                heroInner.style.opacity = "";
+                return;
+            }
+            const p = Math.min(
+                1,
+                Math.max(0, window.scrollY / (heroEl.offsetHeight * 0.9))
+            );
+            heroInner.style.transform = `translate3d(0, ${p * 48}px, 0) scale(${1 - p * 0.04})`;
+            heroInner.style.opacity = String(1 - p * 0.7);
+        };
+        scrollCallbacks.push(() => {
+            if (heroQueued) return;
+            heroQueued = true;
+            requestAnimationFrame(applyHero);
+        });
+    }
 
     /* -------- Sticky nav state -------- */
     const nav = document.querySelector(".nav");
@@ -158,9 +207,13 @@
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
 
-        const TOTAL = 180;
+        const isSmall = () => window.innerWidth < 768;
+        let TOTAL = 180;
+        let lastFrame = 0;
+        let lastW = 0;
         const CLUSTER_N = 3;
         let stars = [], W, H;
+        let smoothY = pageScrollY; // eased scroll value so the parallax glides
 
         function gauss(mean, std) {
             let u = 0, v = 0;
@@ -170,8 +223,14 @@
         }
 
         function build() {
+            TOTAL = isSmall() ? 70 : 180;
+            lastW = window.innerWidth;
             W = canvas.width = window.innerWidth;
-            H = canvas.height = window.innerHeight;
+            // On phones use the tallest viewport (address bar hidden) so the
+            // canvas never needs reallocating while scrolling.
+            H = canvas.height = isSmall()
+                ? Math.max(window.innerHeight, window.screen.height)
+                : window.innerHeight;
             const spread = Math.min(W, H) * 0.18;
 
             const clusters = Array.from({ length: CLUSTER_N }, () => ({
@@ -230,11 +289,21 @@
         }
 
         function draw(t) {
+            // ~30fps on phones: twinkling doesn't need 60 and it frees the
+            // main thread for scrolling.
+            if (!prefersReducedMotion && isSmall() && t - lastFrame < 33) {
+                requestAnimationFrame(draw);
+                return;
+            }
+            lastFrame = t;
             ctx.clearRect(0, 0, W, H);
             const time = t * 0.001;
+            smoothY = prefersReducedMotion
+                ? pageScrollY
+                : smoothY + (pageScrollY - smoothY) * 0.1;
 
             for (const s of stars) {
-                const py = ((s.y - pageScrollY * s.depth) % H + H) % H;
+                const py = ((s.y - smoothY * s.depth) % H + H) % H;
                 const a = prefersReducedMotion
                     ? s.base
                     : s.base * (0.55 + 0.45 * Math.sin(time * s.speed + s.phase));
@@ -258,7 +327,13 @@
             if (!prefersReducedMotion) requestAnimationFrame(draw);
         }
 
-        window.addEventListener("resize", () => { build(); if (prefersReducedMotion) draw(0); }, { passive: true });
+        window.addEventListener("resize", () => {
+            // Mobile browsers fire resize whenever the address bar shows/hides
+            // mid-scroll; rebuilding then reshuffles stars and janks scrolling.
+            if (isSmall() && window.innerWidth === lastW) return;
+            build();
+            if (prefersReducedMotion) draw(0);
+        }, { passive: true });
         build();
         requestAnimationFrame(draw);
     })();
